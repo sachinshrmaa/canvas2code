@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas2Code</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="navbar__logo">Canvas2Code</span>
+
+      <div class="navbar__menu">
+        <a href="#" class="navbar__menu__link">About</a>
+      </div>
+    </nav>
+    <main>
+      <div class="header">
+        <h2>Convert UI Screenshot to Code</h2>
+        <p>
+          Canvas2Code uses deep learing model to generate HTML code from the
+          user interface images as input.
+        </p>
+      </div>
+
+      <div class="code__generator">
+        <form
+          method="post"
+          action="http://127.0.0.1:5000/api/v1/upload"
+          enctype="multipart/form-data"
+        >
+          <label for="file" class="drop-container" id="dropcontainer">
+            <span class="drop-title">Drop files here</span>
+            or
+            <input type="file" name="file" id="file" required />
+          </label>
+
+          <input
+            type="submit"
+            value="Generate Code"
+            class="code__generator__btn"
+          />
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer_meta">Canvas2Code 2023 - 2024</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
